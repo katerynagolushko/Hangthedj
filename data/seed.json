@@ -1,0 +1,32 @@
+{
+ "_note": "All profiles below are fictional demo data.",
+ "communities": [
+  {"slug":"signal-room","name":"Signal Room","type":"AI community"},
+  {"slug":"founders-den","name":"Founders Den","type":"founder community"},
+  {"slug":"corgi","name":"Corgi Community","type":"coworking cafe"},
+  {"slug":"outpost","name":"Outpost","type":"hardware community"},
+  {"slug":"angel-row","name":"Angel Row","type":"investor network"}
+ ],
+ "events": [
+  {"id":"e1","title":"AI Founders Night","date":"2026-10-29","venue":"Shoreditch"},
+  {"id":"e2","title":"Pre-Seed Pitch Breakfast","date":"2026-11-03","venue":"King's Cross"},
+  {"id":"e3","title":"Robotics x GTM Meetup","date":"2026-11-06","venue":"Old Street"},
+  {"id":"e4","title":"Coworking Friday @ Corgi","date":"2026-10-30","venue":"Clerkenwell"}
+ ],
+ "profiles": [
+  {"id":"p1","name":"Maya Okafor","headline":"Founder, LoopLedger (AI bookkeeping for SMBs)","goals":["fundraising","hiring"],"offers":"Fintech GTM playbook, 2 exits' worth of mistakes","needs":"Founding engineer, pre-seed lead","communities":["founders-den","signal-room"],"events":["e1","e2"]},
+  {"id":"p2","name":"Tomasz Wierzbicki","headline":"Angel, ex-Revolut product lead","goals":["investing"],"offers":"£25–100K cheques, fintech intros","needs":"Pre-seed fintech/AI deals","communities":["angel-row"],"events":["e2"]},
+  {"id":"p3","name":"Priya Raman","headline":"Staff ML engineer, open to cofounding","goals":["cofounder","job_hunting"],"offers":"LLM infra, 8 yrs ML","needs":"Commercial cofounder in B2B AI","communities":["corgi","signal-room"],"events":["e1","e4"]},
+  {"id":"p4","name":"Jonah Lindqvist","headline":"Founder, Gripworks (warehouse robotics)","goals":["customers","fundraising"],"offers":"Hardware supply-chain know-how","needs":"GTM lead, logistics customers","communities":["founders-den"],"events":["e3"]},
+  {"id":"p5","name":"Aisha Bello","headline":"Partner, Northlight Ventures (seed)","goals":["investing"],"offers":"Seed rounds £500K–2M, robotics thesis","needs":"Deep-tech founders","communities":["angel-row","outpost"],"events":["e3","e2"]},
+  {"id":"p6","name":"Leo Marchetti","headline":"Head of Growth, ex-Monzo, freelancing","goals":["job_hunting","customers"],"offers":"Growth loops, paid acquisition","needs":"Series A role or fractional clients","communities":["corgi"],"events":["e4","e1"]},
+  {"id":"p7","name":"Hannah Cho","headline":"Founder, Kindred (community software)","goals":["cofounder","customers"],"offers":"Community-led growth, 40K-member Discord","needs":"Technical cofounder","communities":["founders-den","corgi","signal-room"],"events":["e1","e4"]},
+  {"id":"p8","name":"Samuel Adeyemi","headline":"Scout, Tier-1 US fund","goals":["investing"],"offers":"US fund intros, SF relocation advice","needs":"Breakout London founders","communities":["angel-row"],"events":["e1","e2"]},
+  {"id":"p9","name":"Elif Kaya","headline":"Product designer, AI-native tools","goals":["job_hunting","cofounder"],"offers":"0→1 design, Figma to prod","needs":"Early-stage team","communities":["corgi","signal-room"],"events":["e4"]},
+  {"id":"p10","name":"Ravi Mehta","headline":"Founder, ShelfSense (retail computer vision)","goals":["hiring","customers"],"offers":"Retail buyer network","needs":"Robotics engineers, ops lead","communities":["founders-den","signal-room"],"events":["e3","e1"]},
+  {"id":"p11","name":"Clara Dubois","headline":"Ops lead, ex-Deliveroo","goals":["job_hunting"],"offers":"Scaling ops 10→300 people","needs":"Seed/Series A ops role","communities":["corgi"],"events":["e3","e4"]},
+  {"id":"p12","name":"Ben Hartley","headline":"Solo founder, DevRelHQ (devtools analytics)","goals":["fundraising","cofounder"],"offers":"DevRel expertise, OSS audience","needs":"Angels, GTM cofounder","communities":["founders-den"],"events":["e1","e2"]},
+  {"id":"p13","name":"Claudia Voss","headline":"Community manager, Corgi Community","goals":["customers"],"offers":"Knows who in the cafe is actually useful","needs":"Members who ask specific questions","communities":["corgi"],"events":["e4","e1"]},
+  {"id":"p14","name":"Samira Shah","headline":"Community manager, Outpost","goals":["customers"],"offers":"Hardware nights, investor office hours","needs":"Founders with a real prototype","communities":["outpost"],"events":["e3"]}
+ ]
+}

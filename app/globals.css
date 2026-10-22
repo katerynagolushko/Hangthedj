@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0ece6;
+  --foreground: #1b1f3b;
+  --ink: #1b1f3b;
+  --muted: #6b6b6b;
+  --accent: #ff5a24;
+  --live: #22c27a;
+  --card: #ffffff;
+  --card-2: #f8f6f2;
+  --line: #e4e0d8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm), "IBM Plex Sans", sans-serif;
+  --font-display: var(--font-syne), Syne, sans-serif;
+}
+
+html,
+body {
+  background: #f0ece6;
+  color: #1b1f3b;
+}
+
+body {
+  min-height: 100%;
+  font-family: var(--font-ibm), "IBM Plex Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-syne), Syne, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+:focus-visible {
+  outline: 2px solid #1b1f3b;
+  outline-offset: 2px;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #e7e2da;
+  font-family: var(--font-ibm), sans-serif;
+}
+
+.leaflet-container img {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.hang-pin {
+  background: transparent;
+  border: none;
+}
+
+.hang-pin-face {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 16px rgba(27, 31, 59, 0.22);
+  background-size: cover;
+  background-position: center;
+}
+
+.hang-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(27, 31, 59, 0.12);
+}
+
+.hang-place-pin {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #ff5a24;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(27, 31, 59, 0.25);
+}
+
+.hang-popup .leaflet-popup-content {
+  margin: 12px;
+}

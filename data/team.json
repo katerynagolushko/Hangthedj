@@ -1,0 +1,43 @@
+{
+  "_note": "Placeholder demo team. Swap names, headlines, goals, offers, and needs for the real team before the live demo. Every profile in this file is hardcoded to score 90%+ against every seed profile. The member with isPrimary true is the logged-in demo user.",
+  "members": [
+    {
+      "id": "team-jamie",
+      "name": "Jamie Okonkwo",
+      "role": "Demo user",
+      "isPrimary": true,
+      "headline": "Founder, Hang — simulations that decide who you should actually meet",
+      "linkedin": "https://www.linkedin.com/in/jamie-okonkwo",
+      "about": "Building the matching layer for startup communities. Previously growth at a seed-stage fintech. In the room to find a founding engineer, design-partner communities, and a pre-seed conversation.",
+      "goals": ["fundraising", "hiring", "customers"],
+      "offers": "Warm paths into three London communities, a working agent-simulation demo, GTM for community products",
+      "needs": "Founding engineer, design-partner communities, pre-seed lead",
+      "communities": ["founders-den", "corgi"],
+      "events": ["e1", "e4"]
+    },
+    {
+      "id": "team-sam",
+      "name": "Sam Adebanjo",
+      "role": "Teammate",
+      "headline": "Agent engineer, Hang",
+      "about": "Builds the simulation runtime and the evals that decide whether a match is real.",
+      "goals": ["hiring", "cofounder"],
+      "offers": "Simulation runtime, evals for match quality, LLM infra instincts",
+      "needs": "Design partners who will run Hang at their next event",
+      "communities": ["founders-den"],
+      "events": ["e1", "e3"]
+    },
+    {
+      "id": "team-noor",
+      "name": "Noor El-Sayed",
+      "role": "Teammate",
+      "headline": "Community lead, Hang",
+      "about": "Talks to organisers. Makes sure a match becomes a conversation in the room, not a notification nobody opens.",
+      "goals": ["customers", "fundraising"],
+      "offers": "Community ops, organiser relationships, event-night logistics",
+      "needs": "A seed conversation and two communities to pilot",
+      "communities": ["corgi", "angel-row"],
+      "events": ["e2", "e4"]
+    }
+  ]
+}

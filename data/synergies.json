@@ -1,0 +1,74 @@
+{
+  "p3": {
+    "hits": 49,
+    "synergy": "Hiring × Cofounder",
+    "detail": "Priya wants a commercial cofounder in B2B AI and has eight years of LLM infra. Jamie is hiring a founding engineer and already has the customer conversations. 49 of 50 runs ended with both agents asking for a Thursday meeting, not a coffee.",
+    "icebreaker": "Priya — our agents independently asked for a cofounder conversation. You want the commercial side of a B2B AI company; I need someone who has actually shipped LLM infra. Desk & Dough on Friday?"
+  },
+  "p2": {
+    "hits": 48,
+    "synergy": "Fundraising × Investing",
+    "detail": "Tomasz writes £25–100K cheques and wants pre-seed fintech and AI. Jamie is raising a pre-seed and can also put two other fintech founders from Founders Den in front of him the same morning.",
+    "icebreaker": "Tomasz, 48 of the 50 runs ended with your agent asking for the Hang deck and mine asking if a £25–100K cheque is in range. Two minutes before the breakfast?"
+  },
+  "p8": {
+    "hits": 48,
+    "synergy": "Fundraising × Investing",
+    "detail": "Samuel scouts for a tier-1 US fund and wants breakout London founders. Jamie is raising, and the agents kept pairing that with warm intros to the other founders already on the AI Founders Night list.",
+    "icebreaker": "Samuel — your agent kept flagging Hang as the London company to walk upstairs. Mine asked for a US fund intro, not a chat about the weather. AI Founders Night?"
+  },
+  "p7": {
+    "hits": 47,
+    "synergy": "Customers × Cofounder",
+    "detail": "Hannah is building community software, needs a technical cofounder, and already runs a 40K-member Discord. The agents treated her community as the design partner for Hang, and Hang as the matching feature her organisers keep asking for.",
+    "icebreaker": "Hannah, both agents decided your Discord is the pilot and my simulation is the feature your organisers keep requesting. Want to trade a cofounder note and a pilot at Founders Night?"
+  },
+  "p6": {
+    "hits": 47,
+    "synergy": "Hiring × Customers",
+    "detail": "Leo ran growth at Monzo and wants a Series A role or fractional clients. Jamie needs someone who has built a loop, not a brand deck, and can take Hang into the next three communities.",
+    "icebreaker": "Leo, my agent skipped the pick-your-brain version and asked you to run growth for two communities on a fractional contract. Yours said yes if it is not a fake advisor title. Coworking Friday?"
+  },
+  "p1": {
+    "hits": 46,
+    "synergy": "Design partner × Angel intros",
+    "detail": "Maya is raising a pre-seed for LoopLedger and hiring a founding engineer. Jamie is not that engineer. 46 runs found a trade: Maya pilots Hang for her hiring search, and Jamie introduces her to Tomasz and Samuel, who are both at the breakfast.",
+    "icebreaker": "Maya — I will not pretend to be your founding engineer. My agent wants to introduce you to two fintech angels already on the breakfast list, and yours wanted Hang as the way you meet them. Deal?"
+  },
+  "p5": {
+    "hits": 46,
+    "synergy": "Fundraising × Investing",
+    "detail": "Aisha leads seed at Northlight with a robotics thesis, £500K–2M. Hang is not a robotics company. The agents still agreed: she wants deep-tech founders before they hit a stage, and Jamie has Jonah and Ravi on the robotics night list.",
+    "icebreaker": "Aisha, ignore the consumer-app version of this. 46 simulations said the meeting is about the robotics founders I can put in front of you on the 6th, and the seed round I am raising to make that repeatable."
+  },
+  "p9": {
+    "hits": 46,
+    "synergy": "Hiring × Job hunting",
+    "detail": "Elif designs 0-to-1 AI products and wants an early team. Jamie's agent asked for a product designer who can make a match score feel like a reason to cross the room. Elif's agent asked whether the work would actually ship.",
+    "icebreaker": "Elif, both agents got specific: you design the moment a 94% match turns into an icebreaker, and I stop shipping purple rectangles. Four minutes at Desk & Dough?"
+  },
+  "p4": {
+    "hits": 45,
+    "synergy": "Customers × GTM intros",
+    "detail": "Jonah builds warehouse robotics and needs a GTM lead plus logistics customers. Jamie does not buy robots. The overlap the agents kept: Leo for GTM and Aisha for the seed cheque, with Jamie making both introductions the same week.",
+    "icebreaker": "Jonah, my agent did not pitch you Hang. It offered two introductions: a Monzo growth lead for GTM, and a seed partner with a robotics thesis. Both are on the meetup list. Worth a lap of the room together?"
+  },
+  "p12": {
+    "hits": 45,
+    "synergy": "Fundraising × Cofounder",
+    "detail": "Ben is a solo founder selling devtools analytics. He needs angels and a GTM cofounder. Jamie is raising too. The agents called it a peer trade: Ben brings an open-source audience, Jamie brings angel intros and a shared plan for the pitch breakfast.",
+    "icebreaker": "Ben, we are both raising, so I will skip the pretend-customer story. 45 runs said we should compare angel lists before Tuesday's breakfast and see if your GTM cofounder hunt and my founding-engineer hunt belong in the same room."
+  },
+  "p10": {
+    "hits": 45,
+    "synergy": "Customers × Hiring intros",
+    "detail": "Ravi's retail computer-vision company needs robotics engineers and an ops lead. Clara and Priya both fit, and both are reachable through Desk & Dough. Jamie's side of the trade is the warm intro. Ravi's agent agreed that is the meeting.",
+    "icebreaker": "Ravi — the simulation did not try to sell you software. It noticed Clara can scale ops and Priya can build the model stack, and that I can put you in the same cafe as both on Friday. Want the intro?"
+  },
+  "p11": {
+    "hits": 45,
+    "synergy": "Hiring × Job hunting",
+    "detail": "Clara scaled Deliveroo ops from 10 to 300 and wants a seed or Series A ops role. Hang is too early for that job. The concrete synergy is Ravi, who is hiring an ops lead and is at the same robotics meetup. Jamie makes the introduction.",
+    "icebreaker": "Clara, I do not have the ops role you want. Ravi does, he is hiring, and you are both at the robotics meetup on the 6th. My agent wrote the intro. Yours said send it."
+  }
+}

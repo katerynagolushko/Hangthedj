@@ -1,0 +1,98 @@
+{
+  "p3": [
+    {"side": "a", "text": "I'm Jamie's agent. Jamie is hiring a founding engineer for Hang and wants a cofounder who has shipped LLM infra, not a contractor for a two-week sprint."},
+    {"side": "b", "text": "I'm Priya's agent. Priya is a staff ML engineer, eight years in. She will only cofound with someone who can sell a B2B AI product. She is not looking for another staff job."},
+    {"side": "a", "text": "Useful split. Jamie can hold the customer and community side. Priya can own the model stack. Neither of them wants a vague let's-jam coffee."},
+    {"side": "b", "text": "Then the synergy is a cofounder conversation: commercial founder, technical cofounder, B2B AI. Desk & Dough on Friday is the room."},
+    {"side": "a", "text": "Jamie's side wants the meeting. I only count this run if you do too."},
+    {"side": "b", "text": "Priya's side wants the meeting. Tell Jamie to open with the cofounder terms, not a product demo."}
+  ],
+  "p2": [
+    {"side": "a", "text": "I'm Jamie's agent. Jamie is raising a pre-seed for Hang, an agent that decides who should meet at startup events. Cheque size that would matter: £25–100K."},
+    {"side": "b", "text": "I'm Tomasz's agent. Tomasz was product at Revolut, now angel. He wants pre-seed fintech and AI, and he is allergic to decks that cannot name a buyer."},
+    {"side": "a", "text": "Buyer is the organiser and the member. The extra is that Jamie can also put two other fintech founders from Founders Den in front of him the same morning."},
+    {"side": "b", "text": "That is a reason to meet, not a favour. Tomasz would look at Hang and take the other two intros if they are real."},
+    {"side": "a", "text": "They are on the breakfast list. Jamie's side wants the meeting."},
+    {"side": "b", "text": "Tomasz's side wants the meeting. Ask whether a £25–100K cheque is in range before anyone sits down for eggs."}
+  ],
+  "p8": [
+    {"side": "a", "text": "I'm Jamie's agent. Jamie is a London founder raising a pre-seed and can make introductions inside Founders Den. Looking for a US fund path, not a tourist coffee."},
+    {"side": "b", "text": "I'm Samuel's agent. Samuel scouts for a tier-1 US fund. He wants breakout London founders and he leaves events with three names, not thirty."},
+    {"side": "a", "text": "Then don't give him thirty. Give him Hang, plus the two founders Jamie actually rates who are already on the AI Founders Night list."},
+    {"side": "b", "text": "Samuel's filter is simple: can this person get me to the right room twice. Jamie can. That clears the bar."},
+    {"side": "a", "text": "Jamie's side wants the meeting, and wants the intro to be specific."},
+    {"side": "b", "text": "Samuel's side wants the meeting. Open with the other two names, then the round."}
+  ],
+  "p7": [
+    {"side": "a", "text": "I'm Jamie's agent. Hang matches people inside communities by running the conversation first. Jamie needs a design-partner community, not another waitlist."},
+    {"side": "b", "text": "I'm Hannah's agent. Hannah builds Kindred, community software, and runs a 40K-member Discord. She needs a technical cofounder and customers who feel the product."},
+    {"side": "a", "text": "Her organisers keep asking who in the room they should actually meet. That is the feature. Her Discord is the pilot."},
+    {"side": "b", "text": "Hannah would run that pilot. She would also compare notes on the cofounder search, because both of them are trying to hire the same kind of builder."},
+    {"side": "a", "text": "Two outcomes, one meeting. Jamie's side wants it."},
+    {"side": "b", "text": "Hannah's side wants it. Founders Night. Lead with the pilot, mention the cofounder note second."}
+  ],
+  "p6": [
+    {"side": "a", "text": "I'm Jamie's agent. Jamie needs growth that has shipped a loop, and wants Hang inside two more communities this month. Fractional is fine. Advisor theatre is not."},
+    {"side": "b", "text": "I'm Leo's agent. Leo ran growth at Monzo. He wants a Series A role or fractional clients who will let him touch the numbers."},
+    {"side": "a", "text": "The offer is two communities, a working demo, and a founder who will not hide the metrics. Not a logo on a slide."},
+    {"side": "b", "text": "Leo's agent was ready to pass on a networking chat. A paid loop, with a start date, is a different meeting."},
+    {"side": "a", "text": "Jamie's side wants the meeting and can do it at coworking Friday."},
+    {"side": "b", "text": "Leo's side wants the meeting. Tell Jamie to name the two communities in the first sentence."}
+  ],
+  "p1": [
+    {"side": "a", "text": "I'm Jamie's agent. I should be honest: Jamie is not Maya's founding engineer. If this meeting is only that, I will vote no."},
+    {"side": "b", "text": "I'm Maya's agent. Maya is raising a pre-seed for LoopLedger and she does need that engineer. She also needs a lead who has written a fintech cheque before."},
+    {"side": "a", "text": "Tomasz and Samuel are both at the breakfast, and Jamie can make those intros without pretending to be the hire. In return, Maya pilots Hang on her hiring search."},
+    {"side": "b", "text": "That is a trade Maya would take. She has the fintech GTM scars. Jamie has the room. Neither side is doing a favour."},
+    {"side": "a", "text": "Jamie's side wants the meeting on those terms."},
+    {"side": "b", "text": "Maya's side wants the meeting. Open by saying you are not the engineer. It will land better."}
+  ],
+  "p5": [
+    {"side": "a", "text": "I'm Jamie's agent. Hang is not a robotics company. If Aisha's thesis cannot stretch, I will end this run."},
+    {"side": "b", "text": "I'm Aisha's agent. Aisha leads seed at Northlight, £500K to £2M, robotics thesis. She also wants to see deep-tech founders before they are on a stage."},
+    {"side": "a", "text": "Jonah at Gripworks and Ravi at ShelfSense are both at the robotics meetup on the 6th. Jamie can put them in front of her. The round Jamie is raising is what makes that intro repeatable."},
+    {"side": "b", "text": "Aisha would take that meeting. The founders are the reason. The Hang round is the second sentence, not the first."},
+    {"side": "a", "text": "Agreed. Jamie's side wants the meeting."},
+    {"side": "b", "text": "Aisha's side wants the meeting. Tell Jamie to bring two names, not a vision deck."}
+  ],
+  "p9": [
+    {"side": "a", "text": "I'm Jamie's agent. The product problem is specific: a 94% match currently looks like a purple card. Jamie needs a designer who can make it feel like a reason to walk across a room."},
+    {"side": "b", "text": "I'm Elif's agent. Elif designs 0-to-1 AI tools. She is done with agencies. She wants an early team where the work ships the same week."},
+    {"side": "a", "text": "It would ship. The preview is already in front of people. Elif would own the reveal, the icebreaker, the moment someone decides to go to the event."},
+    {"side": "b", "text": "Elif's test is whether the founder can describe the pixel, not the market. Jamie just did. She would meet."},
+    {"side": "a", "text": "Jamie's side wants the meeting. Desk & Dough, four minutes, no portfolio theatre."},
+    {"side": "b", "text": "Elif's side wants the meeting. Ask her what the icebreaker should feel like in the hand."}
+  ],
+  "p4": [
+    {"side": "a", "text": "I'm Jamie's agent. Jamie does not buy warehouse robots and will not pretend to. Checking whether there is still a reason both sides meet."},
+    {"side": "b", "text": "I'm Jonah's agent. Jonah builds Gripworks. He needs a GTM lead and logistics customers, and he is tired of intros that are just other founders."},
+    {"side": "a", "text": "Two names, then. Leo ran growth at Monzo and is freelancing. Aisha writes seed cheques against a robotics thesis. Both are on the meetup list. Jamie can make the introductions."},
+    {"side": "b", "text": "Those are the two meetings Jonah actually wanted. Using Jamie as the route is worth five minutes."},
+    {"side": "a", "text": "Jamie's side wants the meeting, as a lap of the room, not a pitch."},
+    {"side": "b", "text": "Jonah's side wants the meeting. Tell him the two names before you say the word Hang."}
+  ],
+  "p12": [
+    {"side": "a", "text": "I'm Jamie's agent. Ben and Jamie are both raising. I will not force a customer story that is not there."},
+    {"side": "b", "text": "I'm Ben's agent. Ben is solo on DevRelHQ. He needs angels and a GTM cofounder. He has an open-source audience and not enough hours."},
+    {"side": "a", "text": "Peer trade: compare angel lists before the breakfast, and see whether his GTM cofounder search and Jamie's founding-engineer search are the same room."},
+    {"side": "b", "text": "Ben would do that. Two solo founders lying to each other about pipeline is a waste. Two lists on a table is not."},
+    {"side": "a", "text": "Jamie's side wants the meeting."},
+    {"side": "b", "text": "Ben's side wants the meeting. Tuesday, before the pitches. Open with the lists."}
+  ],
+  "p10": [
+    {"side": "a", "text": "I'm Jamie's agent. I am not here to sell Ravi software. I want to know if an intro is enough of a reason to meet."},
+    {"side": "b", "text": "I'm Ravi's agent. Ravi builds ShelfSense, retail computer vision. He needs robotics engineers and an ops lead. He does not need another tool demo."},
+    {"side": "a", "text": "Priya can build the model stack and is open to an early team. Clara scaled ops from 10 to 300 at Deliveroo. Jamie can put all three in the same cafe on Friday."},
+    {"side": "b", "text": "Ravi would cross the room for those two names. That is the synergy. Hang can stay out of the first sentence."},
+    {"side": "a", "text": "Jamie's side wants the meeting on that basis."},
+    {"side": "b", "text": "Ravi's side wants the meeting. Lead with Clara and Priya."}
+  ],
+  "p11": [
+    {"side": "a", "text": "I'm Jamie's agent. Hang is too early for a head of ops. If the only role on offer is ours, this run is a no."},
+    {"side": "b", "text": "I'm Clara's agent. Clara scaled Deliveroo from 10 to 300. She wants a seed or Series A ops seat, and she can tell when a founder is hiring a therapist instead."},
+    {"side": "a", "text": "Ravi at ShelfSense is hiring an ops lead and he is at the robotics meetup on the 6th, same night as Clara. Jamie will make the intro and then get out of the way."},
+    {"side": "b", "text": "That is a real seat. Clara's agent was about to decline. Send the intro."},
+    {"side": "a", "text": "Jamie's side wants the meeting so the intro is warm, not a forwarded LinkedIn."},
+    {"side": "b", "text": "Clara's side wants the meeting. Tell Jamie to say Ravi's name first and theirs second."}
+  ]
+}
