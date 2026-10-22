@@ -36,7 +36,7 @@ export function OrganiserView() {
                 <p className="text-sm text-[#6B6B6B]">
                   {session.title || "Founder"} · {session.employment || "Founder"} · {session.skills || "Simulations"}
                 </p>
-                <p className="text-xs text-[#6B6B6B]">{session.linkedin}</p>
+                <p className="text-xs text-[#6B6B6B]">{session.linkedin || (session.hn ? `news.ycombinator.com/user?id=${session.hn}` : "")}</p>
               </div>
             </div>
             <div className="mt-3 flex gap-2">

@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { dictate } from "@/components/dictation";
 import { Waveform } from "@/components/waveform";
 import { useSession } from "@/components/session";
 import { btn, btnGhost, chip, chipOn, field } from "@/components/ui";
 import { communities, communityBySlug } from "@/lib/demo";
+import type { HnJoinProfile } from "@/lib/hn";
 
 const LOOKING = ["Jobs", "Co-founders", "Co-working spaces", "Feedback", "Investors", "Hires"];
 const EMPLOYMENT = ["Founder", "Full-time", "Part-time", "Between roles", "Student"];
@@ -16,9 +17,13 @@ export function JoinForm({ initialSlug = "corgi" }: { initialSlug?: string }) {
   const { update } = useSession();
   const [slug, setSlug] = useState(initialSlug);
   const [name, setName] = useState("Jamie Okonkwo");
+  const [provider, setProvider] = useState<"linkedin" | "hn">("linkedin");
   const [linkedin, setLinkedin] = useState("https://www.linkedin.com/in/jamie-okonkwo");
   const [hn, setHn] = useState("jamie");
   const [hnPhase, setHnPhase] = useState<"idle" | "reading" | "done">("idle");
+  const [hnProfile, setHnProfile] = useState<HnJoinProfile | null>(null);
+  const [hnNote, setHnNote] = useState("");
+  const hnRequest = useRef(0);
   const [voiceOn, setVoiceOn] = useState(false);
   const [voiceLine, setVoiceLine] = useState("");
   const [title, setTitle] = useState("Founder");
@@ -33,10 +38,49 @@ export function JoinForm({ initialSlug = "corgi" }: { initialSlug?: string }) {
     setLookingFor((current) => (current.includes(item) ? current.filter((value) => value !== item) : [...current, item]));
   }
 
-  function readHn() {
-    if (!hn.trim()) return;
+  function applyHn(profile: HnJoinProfile) {
+    setHnProfile(profile);
+    setHn(profile.handle);
+    setName(profile.name);
+    setTitle(profile.title);
+    setCompany(profile.company);
+    setEmployment(profile.employment);
+    setSkills(profile.skills);
+    setLookingFor(profile.lookingFor);
+  }
+
+  async function readHn(raw = hn): Promise<HnJoinProfile | null> {
+    const handle = raw.trim().replace(/^@/, "");
+    if (!handle) return null;
+    const requestId = ++hnRequest.current;
+    setHn(handle);
     setHnPhase("reading");
-    window.setTimeout(() => setHnPhase("done"), 1600);
+    setHnNote("");
+    try {
+      const response = await fetch(`/api/hn?user=${encodeURIComponent(handle)}`);
+      const data = (await response.json()) as { source?: string; profile?: HnJoinProfile | null };
+      if (requestId !== hnRequest.current) return null;
+      if (!response.ok || !data.profile) {
+        setHnProfile(null);
+        setHnPhase("idle");
+        setHnNote(`No Hacker News user named ${handle}.`);
+        return null;
+      }
+      applyHn(data.profile);
+      setHnPhase("done");
+      setHnNote(data.source === "fallback" ? "Hacker News didn't respond. Filled a starter profile." : "");
+      return data.profile;
+    } catch {
+      if (requestId !== hnRequest.current) return null;
+      setHnPhase("idle");
+      setHnNote("Couldn't reach Hacker News.");
+      return null;
+    }
+  }
+
+  function chooseProvider(next: "linkedin" | "hn") {
+    setProvider(next);
+    if (next === "hn" && hn.trim()) void readHn(hn);
   }
 
   function fillByVoice() {
@@ -66,19 +110,47 @@ export function JoinForm({ initialSlug = "corgi" }: { initialSlug?: string }) {
   return (
     <form
       className="mx-auto max-w-xl px-4 py-8"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
+        const handle = hn.trim().replace(/^@/, "");
+        let nextName = name;
+        let nextTitle = title;
+        let nextCompany = company;
+        let nextEmployment = employment;
+        let nextSkills = skills;
+        let nextLooking = lookingFor;
+        let nextAbout = "";
+        let nextHandle = handle;
+        if (provider === "hn") {
+          if (!handle) return;
+          const already = hnProfile && hnProfile.handle.toLowerCase() === handle.toLowerCase() && hnPhase === "done";
+          if (!already) {
+            const profile = await readHn(handle);
+            if (!profile) return;
+            nextName = profile.name;
+            nextTitle = profile.title;
+            nextCompany = profile.company;
+            nextEmployment = profile.employment;
+            nextSkills = profile.skills;
+            nextLooking = profile.lookingFor;
+            nextAbout = profile.about;
+            nextHandle = profile.handle;
+          } else if (hnProfile?.about) {
+            nextAbout = hnProfile.about;
+          }
+        }
         update({
           onboarded: true,
-          firstName: name.trim().split(" ")[0] || "Jamie",
-          linkedin,
-          hn,
-          title,
-          company,
-          employment,
-          skills,
-          lookingFor,
-          role: title,
+          firstName: nextName.trim().split(" ")[0] || "Jamie",
+          linkedin: provider === "linkedin" ? linkedin : "",
+          hn: provider === "hn" ? nextHandle : "",
+          title: nextTitle,
+          company: nextCompany,
+          employment: nextEmployment,
+          skills: nextSkills,
+          lookingFor: nextLooking,
+          role: nextTitle,
+          ...(nextAbout ? { about: nextAbout } : {}),
           homeCommunity: slug,
           joined: [slug],
           approval: "pending",
@@ -101,35 +173,69 @@ export function JoinForm({ initialSlug = "corgi" }: { initialSlug?: string }) {
       </select>
       <label className="mt-3 block text-sm">Name</label>
       <input className={`${field} mt-1`} value={name} onChange={(event) => setName(event.target.value)} required />
-      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-        <label className="text-sm">
-          LinkedIn URL
-          <input className={`${field} mt-1`} value={linkedin} onChange={(event) => setLinkedin(event.target.value)} required />
-        </label>
-        <label className="text-sm">
-          Hacker News username <span className="text-[#6B6B6B]">(optional)</span>
-          <input className={`${field} mt-1`} value={hn} onChange={(event) => setHn(event.target.value)} placeholder="jamie" />
-        </label>
-      </div>
-      <div className="mt-3 flex flex-wrap items-center gap-2">
-        <button type="button" className={btnGhost} onClick={readHn} disabled={!hn.trim()}>
-          {hnPhase === "reading" ? "Reading your HN" : "Read Hacker News"}
+      <p className="mt-4 text-sm">Join with</p>
+      <div className="mt-2 grid gap-2 sm:grid-cols-2">
+        <button type="button" className={`${provider === "linkedin" ? btn : btnGhost} w-full`} aria-pressed={provider === "linkedin"} onClick={() => chooseProvider("linkedin")}>
+          Continue with LinkedIn
         </button>
+        <button type="button" className={`${provider === "hn" ? btn : btnGhost} w-full`} aria-pressed={provider === "hn"} onClick={() => chooseProvider("hn")}>
+          Continue with Hacker News
+        </button>
+      </div>
+      {provider === "linkedin" ? (
+        <label className="mt-3 block text-sm">
+          LinkedIn URL
+          <input className={`${field} mt-1`} value={linkedin} onChange={(event) => setLinkedin(event.target.value)} aria-label="LinkedIn URL" required />
+        </label>
+      ) : (
+        <label className="mt-3 block text-sm">
+          Hacker News username
+          <input
+            className={`${field} mt-1`}
+            value={hn}
+            onChange={(event) => {
+              hnRequest.current += 1;
+              setHn(event.target.value);
+              setHnPhase("idle");
+              setHnProfile(null);
+              setHnNote("");
+            }}
+            placeholder="jamie"
+            aria-label="Hacker News username"
+            required
+          />
+        </label>
+      )}
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        {provider === "hn" ? (
+          <button type="button" className={btnGhost} onClick={() => void readHn()} disabled={!hn.trim() || hnPhase === "reading"}>
+            {hnPhase === "reading" ? "Reading your HN" : "Fill profile from Hacker News"}
+          </button>
+        ) : null}
         <button type="button" className={btnNavyMic()} onClick={fillByVoice}>
           <Waveform live={voiceOn} />
           Fill my profile by voice
         </button>
       </div>
       {voiceLine ? <p className="mt-2 text-sm text-[#6B6B6B]">Heard: {voiceLine}</p> : null}
-      {hnPhase !== "idle" ? (
+      {hnNote ? <p className="mt-2 text-sm text-[#6B6B6B]">{hnNote}</p> : null}
+      {provider === "hn" && hnPhase !== "idle" ? (
         <div className="mt-3 rounded-xl border border-[#E4E0D8] bg-[#F8F6F2] p-3">
-          <p className="text-sm font-medium">{hnPhase === "reading" ? "Reading your HN" : `HN · ${hn}`}</p>
-          {hnPhase === "done" ? (
+          <p className="text-sm font-medium">{hnPhase === "reading" ? "Reading your HN" : `HN · ${hnProfile?.handle || hn}`}</p>
+          {hnPhase === "done" && hnProfile ? (
             <div className="mt-2 flex flex-wrap gap-2">
-              <span className={chip}>Karma 1,842</span>
-              <span className={chip}>About: builds community tools in London</span>
-              <span className={chip}>Posted Show HN: robotics SDK</span>
-              <span className={chip}>Comment: hired from a cafe, not a job board</span>
+              {hnProfile.karma != null ? <span className={chip}>Karma {hnProfile.karma.toLocaleString("en-US")}</span> : null}
+              {hnProfile.about ? <span className={chip}>About: {hnProfile.about}</span> : null}
+              {hnProfile.posts.map((post) => (
+                <span key={post} className={chip}>
+                  Posted {post}
+                </span>
+              ))}
+              {hnProfile.comments.map((comment) => (
+                <span key={comment} className={chip}>
+                  Comment: {comment}
+                </span>
+              ))}
             </div>
           ) : (
             <p className="mt-2 text-sm text-[#6B6B6B]">Karma, about, and the posts you actually wrote.</p>
